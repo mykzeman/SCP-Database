@@ -58,7 +58,7 @@ $result = $connection->query("SELECT name FROM records");
     class='card-img-top' 
     alt='Say {$array['name']}' 
     style='cursor: pointer;' 
-    onclick='speechToText()'>
+    onclick='speechToText(\"Hello, My name is {$array['name']}\")'>
 </div>
 
     </div>
