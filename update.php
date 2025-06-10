@@ -14,7 +14,7 @@ if(isset($_GET['recordnum'])) {
 
   if(isset($_POST['submit'])) {
    $item=$connection->prepare("update records set name=?,class=?,containment=?,description=?,image=? where recordnum=?");
-   $item->bind_param("ssssss",$_POST['name'],$_POST['class'],$_POST['containment'],$_POST['description'],$_POST['image'],$update);
+   $item->bind_param("sssssi",$_POST['name'],$_POST['class'],$_POST['containment'],$_POST['description'],$_POST['image'],$update);
    if ($item->execute()){
        echo "<div class='alert alert-success' role='alert'>
   SCP updated successfully!
